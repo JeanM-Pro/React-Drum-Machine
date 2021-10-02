@@ -1,0 +1,1 @@
+export const audioq = <audio src='./Legowelt-Basedrum-001.wav' autoplay type='audio/wav'></audio>
