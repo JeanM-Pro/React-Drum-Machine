@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {sample} from './data.js'
 
 
 export const DrumMachineApp = () => {
+
+    const boton = document.getElementById('Heater-1');
+    const audio = document.getElementById('Q')
+    boton.addEventListener('click', ()=>{
+        audio.onplay();
+    })
+
+
 
     return (
         <div className='content'>
@@ -9,19 +18,49 @@ export const DrumMachineApp = () => {
             <div id='drum-machine'>
 
                 <div className='pad-content'>
-                    <button className="drum-pad" id='Legowelt -Basedrum-001'>Q</button>
-                    <button className="drum-pad" id='Legowelt-Basedrum-007'>W</button>
-                    <button className="drum-pad" id='Legowelt-Basedrum-016'>E</button>
-                    <button className="drum-pad" id='Legowelt-Clap-002'>A</button>
-                    <button className="drum-pad" id='Legowelt-Hat6open'>S</button>
-                    <button className="drum-pad" id='Legowelt-Hat-closed'>D</button>
-                    <button className="drum-pad" id='Legowelt-Percussion-Synth-37'>Z</button>
-                    <button className="drum-pad" id='Legowelt-Snare-001'>X</button>
-                    <button className="drum-pad" id='Legowelt-Snare-036'>C</button>
+                    <button className="drum-pad" id={sample[0].id} value='reproducir'>Q
+                        <audio className='clip' id={sample[0].keyTrigger} src={sample[0].url}/>
+                    </button>
+
+                    <button className="drum-pad" id={sample[1].id}>W
+                        <audio className='clip' id={sample[1].keyTrigger} src={sample[1].url}/>
+                    </button>
+
+                    <button className="drum-pad" id={sample[2].id}>E
+                        <audio className='clip' id={sample[2].keyTrigger} src={sample[2].url}/>
+                    </button>
+                    
+                    <button className="drum-pad" id={sample[3].id}>A
+                        <audio className='clip' id={sample[3].keyTrigger} src={sample[3].url}/>
+                    </button>
+
+                    <button className="drum-pad" id={sample[4].id}>S
+                        <audio className='clip' id={sample[4].keyTrigger} src={sample[4].url}/>
+                    </button>
+
+                    <button className="drum-pad" id={sample[5].id}>D
+                        <audio className='clip' id={sample[5].keyTrigger} src={sample[5].url}/>
+                    </button>
+
+                    <button className="drum-pad" id={sample[6].id}>Z
+                        <audio className='clip' id={sample[6].keyTrigger} src={sample[6].url}/>
+                    </button>
+
+                    <button className="drum-pad" id={sample[7].id}>X
+                        <audio className='clip' id={sample[7].keyTrigger} src={sample[7].url}/>
+                    </button>
+
+                    <button className="drum-pad" id={sample[8].id}>C
+                        <audio className='clip' id={sample[8].keyTrigger} src={sample[8].url}/>
+                    </button>
                 </div>
 
-                <div id='display'>
-                    Holaa
+                <div className='display-content'>
+
+                    <div id='display'>
+                        Holaa
+                    </div>
+                    
                 </div>
 
             </div>
