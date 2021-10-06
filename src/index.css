@@ -19,7 +19,7 @@ body {
   display: flex;
   height: 45%;
   width: 45%;
-  border: rgb(40, 4, 245) solid 5px;
+  border: rgb(252, 181, 3) solid 5px;
   justify-content: center;
   align-items: center;
 }

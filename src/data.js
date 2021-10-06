@@ -1,4 +1,4 @@
-export const sample = [
+export const samples = [
     {
       keyCode: 81,
       keyTrigger: 'Q',
